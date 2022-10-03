@@ -17,6 +17,10 @@ export class BiereService {
     return this.client.get<Biere[]>(this.url+"bieres")
   }
 
+  getCat() : Observable<Categorie[]> {
+    return this.client.get<Categorie[]>(this.url+"categorie")
+  }
+
   getDetail(id : number) : Observable<Biere> {
     return this.client.get<Biere>(this.url+"bieres/"+id)
       .pipe(
@@ -49,6 +53,14 @@ export class BiereService {
 
   }
 
+  addBeer(nom: string, catid : string, degre : number) {
+    let idCat : number = Number.parseInt(catid)
+    return this.client.post(this.url+"bieres", {nom, degre, idCat})
+  }
+
+  delete(id : number) {
+    return this.client.delete(this.url+"bieres/"+id)
+  }
 }
 
 

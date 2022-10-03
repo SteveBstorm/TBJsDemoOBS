@@ -16,9 +16,11 @@ export class Demo3Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.service.getAll().pipe(
-      map((x : Biere[]) => x.filter(b => b.idCat == 1) )
-    ).subscribe({
+    this.loadData()
+  }
+
+  loadData() {
+    this.service.getAll().subscribe({
       next : (data : Biere[]) => {
         this.liste = data
       }
@@ -26,10 +28,18 @@ export class Demo3Component implements OnInit {
   }
 
    getById(id : number){
-    this.selected = this.service.getFoireu(id)
-    // this.service.getDetail(id).subscribe({
-    //   next : (b : Biere) => this.selected = b
-    // })
+    // this.selected = this.service.getFoireu(id)
+    this.service.getDetail(id).subscribe({
+      next : (b : Biere) => this.selected = b
+    })
+  }
+
+  delete(id : number) {
+    this.service.delete(id).subscribe({
+      next : () => {
+        this.loadData()
+      }
+    })
   }
 
 }

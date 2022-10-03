@@ -1,0 +1,11 @@
+<p>newbeer works!</p>
+<p>Nom : <input [(ngModel)]="nom"></p>
+<p>Degré : <input [(ngModel)]="degre"></p>
+<p>Catégorie :
+  <select [(ngModel)]="catId">
+    <option *ngFor="let c of catList" [value]="c.id">
+      {{c.nom}}
+    </option>
+  </select>
+</p>
+<button (click)="addBeer()">Ajouter</button>

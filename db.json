@@ -1,38 +1,38 @@
 {
   "bieres": [
     {
-      "id" : 1,
-      "nom" : "Westmaelle",
-      "degre" : 8,
-      "idCat" : 1
+      "id": 1,
+      "nom": "Westmaelle",
+      "degre": 8,
+      "idCat": 1
     },
     {
-      "id" : 2,
-      "nom" : "Jupiler",
-      "degre" : 5,
-      "idCat" : 2
+      "id": 2,
+      "nom": "Jupiler",
+      "degre": 5,
+      "idCat": 2
     },
     {
-      "id" : 3,
-      "nom" : "Chimay Bleue",
-      "idCat" : 1,
-      "degre" : 9
+      "id": 3,
+      "nom": "Chimay Bleue",
+      "idCat": 1,
+      "degre": 9
     },
     {
-      "id" : 4,
-      "nom" : "Lupulus",
-      "degre" : 8,
-      "idCat" : 2
+      "id": 4,
+      "nom": "Lupulus",
+      "degre": 8,
+      "idCat": 2
     }
   ],
-  "categorie" : [
+  "categorie": [
     {
-      "id" : 1,
-      "nom" : "Abbaye"
+      "id": 1,
+      "nom": "Abbaye"
     },
     {
-      "id" : 2,
-      "nom" : "Pils"
+      "id": 2,
+      "nom": "Pils"
     }
   ]
 }

@@ -9,18 +9,22 @@ import { Demo2Component } from './components/demo2/demo2.component';
 import { Demo3Component } from './components/demo3/demo3.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import { NewbeerComponent } from './components/newbeer/newbeer.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     Demo1Component,
     HeaderComponent,
     Demo2Component,
-    Demo3Component
+    Demo3Component,
+    NewbeerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

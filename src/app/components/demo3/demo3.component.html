@@ -1,4 +1,5 @@
 <p>demo3 works!</p>
+<a routerLink="../add">Ajouter bière</a>
 <table>
   <tr>
     <th>Nom</th>
@@ -10,7 +11,9 @@
     <td>{{b.nom}}</td>
     <td>{{b.degre}}</td>
     <td>{{b.idCat}}</td>
-    <td><button (click)="getById(b.id)">Detail</button></td>
+    <td><button (click)="getById(b.id)">Detail</button>
+        <button (click)="delete(b.id)">X</button>
+    </td>
   </tr>
 </table>
 
@@ -18,3 +21,6 @@
 <div style="border : 1px black solid" *ngIf="selected">
   {{selected.nom}} - {{selected.categorie}}
 </div>
+
+
+<router-outlet></router-outlet>
