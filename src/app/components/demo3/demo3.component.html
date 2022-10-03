@@ -1,0 +1,20 @@
+<p>demo3 works!</p>
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Degré</th>
+    <th>Catégorie</th>
+    <th></th>
+  </tr>
+  <tr *ngFor="let b of liste">
+    <td>{{b.nom}}</td>
+    <td>{{b.degre}}</td>
+    <td>{{b.idCat}}</td>
+    <td><button (click)="getById(b.id)">Detail</button></td>
+  </tr>
+</table>
+
+<hr />
+<div style="border : 1px black solid" *ngIf="selected">
+  {{selected.nom}} - {{selected.categorie}}
+</div>
